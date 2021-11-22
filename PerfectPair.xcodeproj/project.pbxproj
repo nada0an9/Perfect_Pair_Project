@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04DB51E3274B84120005D55E /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB51E1274B84120005D55E /* loginViewController.swift */; };
+		04DB51E4274B84120005D55E /* loginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DB51E2274B84120005D55E /* loginViewController.xib */; };
+		04DB51E7274B843D0005D55E /* signViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB51E5274B843D0005D55E /* signViewController.swift */; };
+		04DB51E8274B843D0005D55E /* signViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DB51E6274B843D0005D55E /* signViewController.xib */; };
 		2D915A07274AC26D00B9B62F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A06274AC26D00B9B62F /* AppDelegate.swift */; };
 		2D915A09274AC26D00B9B62F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A08274AC26D00B9B62F /* SceneDelegate.swift */; };
 		2D915A0B274AC26D00B9B62F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A0A274AC26D00B9B62F /* ViewController.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DB51E1274B84120005D55E /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		04DB51E2274B84120005D55E /* loginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loginViewController.xib; sourceTree = "<group>"; };
+		04DB51E5274B843D0005D55E /* signViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signViewController.swift; sourceTree = "<group>"; };
+		04DB51E6274B843D0005D55E /* signViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = signViewController.xib; sourceTree = "<group>"; };
 		2D915A03274AC26D00B9B62F /* PerfectPair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectPair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D915A06274AC26D00B9B62F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D915A08274AC26D00B9B62F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +89,10 @@
 				2D915A08274AC26D00B9B62F /* SceneDelegate.swift */,
 				2D915A0A274AC26D00B9B62F /* ViewController.swift */,
 				2D915A0C274AC26D00B9B62F /* Main.storyboard */,
+				04DB51E5274B843D0005D55E /* signViewController.swift */,
+				04DB51E6274B843D0005D55E /* signViewController.xib */,
+				04DB51E1274B84120005D55E /* loginViewController.swift */,
+				04DB51E2274B84120005D55E /* loginViewController.xib */,
 				2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */,
 				2D915A2C274ACE4800B9B62F /* CartViewController.swift */,
 				2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */,
@@ -163,6 +175,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DB51E8274B843D0005D55E /* signViewController.xib in Resources */,
+				04DB51E4274B84120005D55E /* loginViewController.xib in Resources */,
 				2D915A16274AC26D00B9B62F /* LaunchScreen.storyboard in Resources */,
 				2D915A13274AC26D00B9B62F /* Assets.xcassets in Resources */,
 				2D915A0E274AC26D00B9B62F /* Main.storyboard in Resources */,
@@ -176,6 +190,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DB51E7274B843D0005D55E /* signViewController.swift in Sources */,
+				04DB51E3274B84120005D55E /* loginViewController.swift in Sources */,
 				2D915A24274AC6B100B9B62F /* Order+CoreDataProperties.swift in Sources */,
 				2D915A0B274AC26D00B9B62F /* ViewController.swift in Sources */,
 				2D915A2B274AC7A300B9B62F /* proudectCollectionViewCell.swift in Sources */,
