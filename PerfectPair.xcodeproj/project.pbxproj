@@ -27,6 +27,10 @@
 		2D915A2B274AC7A300B9B62F /* proudectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */; };
 		2D915A2D274ACE4800B9B62F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2C274ACE4800B9B62F /* CartViewController.swift */; };
 		2D915A2F274AD57B00B9B62F /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */; };
+		645CEB3E274BC51400D0CA68 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CEB3C274BC51400D0CA68 /* ProductVC.swift */; };
+		645CEB3F274BC51400D0CA68 /* ProductVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645CEB3D274BC51400D0CA68 /* ProductVC.xib */; };
+		645CEB42274BC60E00D0CA68 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CEB40274BC60E00D0CA68 /* ProductCell.swift */; };
+		645CEB43274BC60E00D0CA68 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645CEB41274BC60E00D0CA68 /* ProductCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proudectCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D915A2C274ACE4800B9B62F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
+		645CEB3C274BC51400D0CA68 /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
+		645CEB3D274BC51400D0CA68 /* ProductVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductVC.xib; sourceTree = "<group>"; };
+		645CEB40274BC60E00D0CA68 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		645CEB41274BC60E00D0CA68 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				2D915A14274AC26D00B9B62F /* LaunchScreen.storyboard */,
 				2D915A17274AC26D00B9B62F /* Info.plist */,
 				2D915A0F274AC26D00B9B62F /* PerfectPair.xcdatamodeld */,
+				645CEB3C274BC51400D0CA68 /* ProductVC.swift */,
+				645CEB3D274BC51400D0CA68 /* ProductVC.xib */,
+				645CEB40274BC60E00D0CA68 /* ProductCell.swift */,
+				645CEB41274BC60E00D0CA68 /* ProductCell.xib */,
 			);
 			path = PerfectPair;
 			sourceTree = "<group>";
@@ -177,7 +189,9 @@
 			files = (
 				04DB51E8274B843D0005D55E /* signViewController.xib in Resources */,
 				04DB51E4274B84120005D55E /* loginViewController.xib in Resources */,
+				645CEB3F274BC51400D0CA68 /* ProductVC.xib in Resources */,
 				2D915A16274AC26D00B9B62F /* LaunchScreen.storyboard in Resources */,
+				645CEB43274BC60E00D0CA68 /* ProductCell.xib in Resources */,
 				2D915A13274AC26D00B9B62F /* Assets.xcassets in Resources */,
 				2D915A0E274AC26D00B9B62F /* Main.storyboard in Resources */,
 			);
@@ -200,9 +214,11 @@
 				2D915A26274AC6B100B9B62F /* Customer+CoreDataProperties.swift in Sources */,
 				2D915A2F274AD57B00B9B62F /* CartCollectionViewCell.swift in Sources */,
 				2D915A07274AC26D00B9B62F /* AppDelegate.swift in Sources */,
+				645CEB3E274BC51400D0CA68 /* ProductVC.swift in Sources */,
 				2D915A23274AC6B100B9B62F /* Order+CoreDataClass.swift in Sources */,
 				2D915A09274AC26D00B9B62F /* SceneDelegate.swift in Sources */,
 				2D915A25274AC6B100B9B62F /* Customer+CoreDataClass.swift in Sources */,
+				645CEB42274BC60E00D0CA68 /* ProductCell.swift in Sources */,
 				2D915A27274AC6B100B9B62F /* Proudect+CoreDataClass.swift in Sources */,
 				2D915A28274AC6B100B9B62F /* Proudect+CoreDataProperties.swift in Sources */,
 			);
