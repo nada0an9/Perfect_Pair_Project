@@ -6,8 +6,11 @@
 //
 
 import UIKit
-
+import CoreData
 class ProductVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet weak var productCollectionView: UICollectionView!
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -18,24 +21,29 @@ class ProductVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     
+      var Listproduct = [Proudect]()
+    
+    let contrxt = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-    @IBOutlet weak var productCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         productCollectionView.register(UINib(nibName: "ProductCell", bundle: nil), forCellWithReuseIdentifier: "productCell")
-
-        // Do any additional setup after loading the view.
+      //  Proudect.dataSource = self
+        
+        LoadProudect()
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        func LoadProudect(){
+            let fecthRequest:NSFetchRequest<Proudect> = Proudect.fetchRequest()
+            do {
+                self.Listproduct = try! contrxt.fetch(fecthRequest)
+            } catch{
+                print("unable to fetch")
+            }
+        }
+        
+  
 }
+
+

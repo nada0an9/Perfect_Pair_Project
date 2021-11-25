@@ -27,10 +27,12 @@
 		2D915A2B274AC7A300B9B62F /* proudectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */; };
 		2D915A2D274ACE4800B9B62F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2C274ACE4800B9B62F /* CartViewController.swift */; };
 		2D915A2F274AD57B00B9B62F /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */; };
+		64423345274D1EE6003C7E75 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64423344274D1EE6003C7E75 /* Dashboard.storyboard */; };
 		645CEB3E274BC51400D0CA68 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CEB3C274BC51400D0CA68 /* ProductVC.swift */; };
 		645CEB3F274BC51400D0CA68 /* ProductVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645CEB3D274BC51400D0CA68 /* ProductVC.xib */; };
 		645CEB42274BC60E00D0CA68 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645CEB40274BC60E00D0CA68 /* ProductCell.swift */; };
 		645CEB43274BC60E00D0CA68 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645CEB41274BC60E00D0CA68 /* ProductCell.xib */; };
+		647E1ABA274F9CF9004AB49F /* الفيديو.mov in Resources */ = {isa = PBXBuildFile; fileRef = 647E1AB9274F9CF9004AB49F /* الفيديو.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,10 +58,12 @@
 		2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proudectCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D915A2C274ACE4800B9B62F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
+		64423344274D1EE6003C7E75 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		645CEB3C274BC51400D0CA68 /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 		645CEB3D274BC51400D0CA68 /* ProductVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductVC.xib; sourceTree = "<group>"; };
 		645CEB40274BC60E00D0CA68 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		645CEB41274BC60E00D0CA68 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		647E1AB9274F9CF9004AB49F /* الفيديو.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "الفيديو.mov"; path = "../../../Desktop/الفيديو.mov"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,11 @@
 			children = (
 				2D915A29274AC6C900B9B62F /* Model */,
 				2D915A06274AC26D00B9B62F /* AppDelegate.swift */,
+				647E1AB9274F9CF9004AB49F /* الفيديو.mov */,
 				2D915A08274AC26D00B9B62F /* SceneDelegate.swift */,
 				2D915A0A274AC26D00B9B62F /* ViewController.swift */,
 				2D915A0C274AC26D00B9B62F /* Main.storyboard */,
+				64423344274D1EE6003C7E75 /* Dashboard.storyboard */,
 				04DB51E5274B843D0005D55E /* signViewController.swift */,
 				04DB51E6274B843D0005D55E /* signViewController.xib */,
 				04DB51E1274B84120005D55E /* loginViewController.swift */,
@@ -190,9 +196,11 @@
 				04DB51E8274B843D0005D55E /* signViewController.xib in Resources */,
 				04DB51E4274B84120005D55E /* loginViewController.xib in Resources */,
 				645CEB3F274BC51400D0CA68 /* ProductVC.xib in Resources */,
+				64423345274D1EE6003C7E75 /* Dashboard.storyboard in Resources */,
 				2D915A16274AC26D00B9B62F /* LaunchScreen.storyboard in Resources */,
 				645CEB43274BC60E00D0CA68 /* ProductCell.xib in Resources */,
 				2D915A13274AC26D00B9B62F /* Assets.xcassets in Resources */,
+				647E1ABA274F9CF9004AB49F /* الفيديو.mov in Resources */,
 				2D915A0E274AC26D00B9B62F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
