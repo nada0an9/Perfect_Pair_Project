@@ -9,5 +9,9 @@ import UIKit
 
 class CartCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var sizeSegment: UISegmentedControl!
     @IBOutlet weak var cartNameLable: UILabel!
+    @IBOutlet weak var qtyTextField: UITextField!
+    
+
 }

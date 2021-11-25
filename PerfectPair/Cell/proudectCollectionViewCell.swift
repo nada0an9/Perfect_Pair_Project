@@ -11,5 +11,7 @@ class proudectCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var proudect_name_Lable: UILabel!
     
+    @IBOutlet weak var shoseImage: UIImageView!
+    @IBOutlet weak var priceLable: UILabel!
     
 }

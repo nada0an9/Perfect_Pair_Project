@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D5FE477274D4CC000487C9B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5FE476274D4CC000487C9B /* OrderViewController.swift */; };
+		2D5FE47A274D4D6E00487C9B /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5FE479274D4D6E00487C9B /* OrderCollectionViewCell.swift */; };
 		2D915A07274AC26D00B9B62F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A06274AC26D00B9B62F /* AppDelegate.swift */; };
 		2D915A09274AC26D00B9B62F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A08274AC26D00B9B62F /* SceneDelegate.swift */; };
 		2D915A0B274AC26D00B9B62F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A0A274AC26D00B9B62F /* ViewController.swift */; };
@@ -23,9 +25,13 @@
 		2D915A2B274AC7A300B9B62F /* proudectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */; };
 		2D915A2D274ACE4800B9B62F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2C274ACE4800B9B62F /* CartViewController.swift */; };
 		2D915A2F274AD57B00B9B62F /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */; };
+		2DF53613274D4FE900A5425B /* Cart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53611274D4FE900A5425B /* Cart+CoreDataClass.swift */; };
+		2DF53614274D4FE900A5425B /* Cart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53612274D4FE900A5425B /* Cart+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D5FE476274D4CC000487C9B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		2D5FE479274D4D6E00487C9B /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D915A03274AC26D00B9B62F /* PerfectPair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectPair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D915A06274AC26D00B9B62F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D915A08274AC26D00B9B62F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +50,8 @@
 		2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proudectCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D915A2C274ACE4800B9B62F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
+		2DF53611274D4FE900A5425B /* Cart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2DF53612274D4FE900A5425B /* Cart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D5FE478274D4CD300487C9B /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D915A2C274ACE4800B9B62F /* CartViewController.swift */,
+				2D5FE476274D4CC000487C9B /* OrderViewController.swift */,
+				2D915A0A274AC26D00B9B62F /* ViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		2D5FE47B274D4D7800487C9B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */,
+				2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */,
+				2D5FE479274D4D6E00487C9B /* OrderCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2D9159FA274AC26D00B9B62F = {
 			isa = PBXGroup;
 			children = (
@@ -79,11 +107,9 @@
 				2D915A29274AC6C900B9B62F /* Model */,
 				2D915A06274AC26D00B9B62F /* AppDelegate.swift */,
 				2D915A08274AC26D00B9B62F /* SceneDelegate.swift */,
-				2D915A0A274AC26D00B9B62F /* ViewController.swift */,
 				2D915A0C274AC26D00B9B62F /* Main.storyboard */,
-				2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */,
-				2D915A2C274ACE4800B9B62F /* CartViewController.swift */,
-				2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */,
+				2D5FE47B274D4D7800487C9B /* Cell */,
+				2D5FE478274D4CD300487C9B /* View Controller */,
 				2D915A12274AC26D00B9B62F /* Assets.xcassets */,
 				2D915A14274AC26D00B9B62F /* LaunchScreen.storyboard */,
 				2D915A17274AC26D00B9B62F /* Info.plist */,
@@ -95,6 +121,8 @@
 		2D915A29274AC6C900B9B62F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2DF53611274D4FE900A5425B /* Cart+CoreDataClass.swift */,
+				2DF53612274D4FE900A5425B /* Cart+CoreDataProperties.swift */,
 				2D915A1D274AC6B000B9B62F /* Order+CoreDataClass.swift */,
 				2D915A1E274AC6B000B9B62F /* Order+CoreDataProperties.swift */,
 				2D915A1F274AC6B000B9B62F /* Customer+CoreDataClass.swift */,
@@ -177,8 +205,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D915A24274AC6B100B9B62F /* Order+CoreDataProperties.swift in Sources */,
+				2DF53613274D4FE900A5425B /* Cart+CoreDataClass.swift in Sources */,
+				2D5FE47A274D4D6E00487C9B /* OrderCollectionViewCell.swift in Sources */,
 				2D915A0B274AC26D00B9B62F /* ViewController.swift in Sources */,
 				2D915A2B274AC7A300B9B62F /* proudectCollectionViewCell.swift in Sources */,
+				2DF53614274D4FE900A5425B /* Cart+CoreDataProperties.swift in Sources */,
+				2D5FE477274D4CC000487C9B /* OrderViewController.swift in Sources */,
 				2D915A11274AC26D00B9B62F /* PerfectPair.xcdatamodeld in Sources */,
 				2D915A2D274ACE4800B9B62F /* CartViewController.swift in Sources */,
 				2D915A26274AC6B100B9B62F /* Customer+CoreDataProperties.swift in Sources */,

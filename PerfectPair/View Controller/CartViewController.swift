@@ -13,56 +13,54 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
     // Handle for the whole DataModel to interact with
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var result =  [Order]()
-    
+    var result =  [Cart]()
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         result.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_id", for: indexPath as IndexPath) as! CartCollectionViewCell
-
-        for item in result{
-     
-            let obj = item as! Order
-            var cName :String?
-            cell.cartNameLable.text = obj.order_date
-
-            for item in obj.toProudect!
-                 {
-                   let a = item as! Proudect
-                    cName = a.proudect_name
-                    print(cName)
-                 }
-
-        }
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_id", for: indexPath as IndexPath) as! CartCollectionViewCell
+        cell.layer.cornerRadius = 12;
+        cell.cartNameLable.text = result[indexPath.row].proudect_name
+        cell.qtyTextField.text = result[indexPath.row].proudect_qty
+        
+
         return cell
     }
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        var s = result[indexPath.row].toProudect
-        
-        print("item for one order")
+        let cartToRemoved = result[indexPath.row]
 
-        for item in s!{
-            print(item)
-
+        for item in result{
+        self.context.delete(item)
+        do{
+            try context.save()
         }
+        catch{
+            print("unable to delete")
+        }
+        }
+        fetchDataFromDB()
+//
+//                var s = result[indexPath.row].toProudect
+//                print("item for one order")
+//
+//                for item in s!{
+//                    print(item)}
+
+                
     }
     
     
     func fetchDataFromDB() {
         
-     
-       
-        
         // get the context
         // configure the request - NSFetchRequest
-        let request = Order.fetchRequest() as! NSFetchRequest<Order>
+        let request = Cart.fetchRequest() as! NSFetchRequest<Cart>
         
-
         // fetchRequest
         // assign the result of fetchRequest to array
         do {
@@ -73,19 +71,15 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
     }
     
     
-    var proudectArrInCart = [Proudect]()
-    
     @IBOutlet weak var cartCollectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("here cart")
-        print(proudectArrInCart)
+     
         cartCollectionView.dataSource = self
         cartCollectionView.delegate = self
         fetchDataFromDB()
-      
+        
         
     }
-
+    
 }

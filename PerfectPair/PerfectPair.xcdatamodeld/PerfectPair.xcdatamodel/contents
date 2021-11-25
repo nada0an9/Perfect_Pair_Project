@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cart" representedClassName="Cart" syncable="YES">
+        <attribute name="cart_date" optional="YES" attributeType="String"/>
+        <attribute name="proudect_name" optional="YES" attributeType="String"/>
+        <attribute name="proudect_price" optional="YES" attributeType="String"/>
+        <attribute name="proudect_qty" optional="YES" attributeType="String"/>
+        <attribute name="proudect_size" optional="YES" attributeType="String"/>
+        <relationship name="toCustomer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="toCart" inverseEntity="Customer"/>
+    </entity>
     <entity name="Customer" representedClassName="Customer" syncable="YES">
         <attribute name="customer_address" optional="YES" attributeType="String"/>
         <attribute name="customer_email" optional="YES" attributeType="String"/>
         <attribute name="customer_name" optional="YES" attributeType="String"/>
         <attribute name="customer_password" optional="YES" attributeType="String"/>
+        <relationship name="toCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cart" inverseName="toCustomer" inverseEntity="Cart"/>
         <relationship name="toOrder" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Order" inverseName="toCustomer" inverseEntity="Order"/>
     </entity>
     <entity name="Order" representedClassName="Order" syncable="YES">
@@ -19,12 +28,12 @@
         <attribute name="proudect_name" optional="YES" attributeType="String"/>
         <attribute name="proudect_photo" optional="YES" attributeType="String"/>
         <attribute name="proudect_price" optional="YES" attributeType="String"/>
-        <attribute name="proudect_size" optional="YES" attributeType="String"/>
         <relationship name="toOrder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="toProudect" inverseEntity="Order"/>
     </entity>
     <elements>
-        <element name="Proudect" positionX="-313.453125" positionY="-247.44140625" width="128" height="118"/>
-        <element name="Order" positionX="-24.6328125" positionY="-247.1171875" width="128" height="133"/>
-        <element name="Customer" positionX="248.97265625" positionY="-145.3203125" width="128" height="118"/>
+        <element name="Cart" positionX="-318.6796875" positionY="-349.80078125" width="122.14453125" height="133"/>
+        <element name="Customer" positionX="169.484375" positionY="-74.17578125" width="128" height="133"/>
+        <element name="Order" positionX="4.87890625" positionY="-254.28125" width="128" height="133"/>
+        <element name="Proudect" positionX="-513.265625" positionY="-269.90234375" width="128" height="103"/>
     </elements>
 </model>
