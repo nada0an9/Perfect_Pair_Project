@@ -8,7 +8,16 @@
 import UIKit
 
 class loginViewController: UIViewController {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
+//    button.layer.cornerRadius =
+//    button.layer.borderWidth = 1
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPass: UITextField!
+    @IBOutlet weak var txtAdrs: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +25,20 @@ class loginViewController: UIViewController {
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    @IBAction func btSign(_ sender: UIButton) {
+        let newCustomer = Customer (context : context)
+        newCustomer.customer_name = txtUsername.text
+        newCustomer.customer_email = txtEmail.text
+        newCustomer.customer_password = txtPass.text
+        newCustomer.customer_address = txtAdrs.text
+        
+            // save Context
+            do {
+                try! context.save()
+                
+            }
 
 }
+}
+
