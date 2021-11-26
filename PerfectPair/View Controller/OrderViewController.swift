@@ -15,6 +15,7 @@ class OrderViewController: UIViewController {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         result.count
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -23,16 +24,7 @@ class OrderViewController: UIViewController {
         
         cell.cartNameLable.text = result[indexPath.row].order_date
         
-        //        for item in result[indexPath.row].toProudect!
-        //        {
-        //            let a = item as! Proudect
-        //            var cName = a.proudect_name
-        //
-        //            print("order proudect\(cName)")
-        //
-        //
-        //        }
-        
+
         return cell
 
     }
