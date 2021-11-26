@@ -10,16 +10,18 @@ import CoreData
 
 class ViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate{
     
+    var loggedInUder : Customer?
+
     @IBAction func goToCart(_ sender: Any) {
         
-       
-  
-  
         
     }
 
       
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cartVC = segue.destination as! CartViewController
+        cartVC.crrunrCustomer = loggedInUder
+    }
     
     //MARK: collectionView Stuff
     
@@ -50,11 +52,10 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         newCart.proudect_qty = "1"
         newCart.proudect_name = result[indexPath.row].proudect_name
         newCart.proudect_price = result[indexPath.row].proudect_price
-
-        
-        
+        newCart.toCustomer = loggedInUder
         
     }
+    
 
     
     //MARK: DataBase Stuff
@@ -66,6 +67,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
     var result =  [Proudect]()
     
         func addProudect(){
+            
         let newProudect = Proudect(context: context)
         newProudect.proudect_name = "Nike Aire Max"
         newProudect.proudect_photo = "142-1425977_nike-red-shoes-fabulous-nike-zoom-tra8n-command.png"

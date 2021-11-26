@@ -27,6 +27,8 @@
 		2D915A2F274AD57B00B9B62F /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */; };
 		2DF53613274D4FE900A5425B /* Cart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53611274D4FE900A5425B /* Cart+CoreDataClass.swift */; };
 		2DF53614274D4FE900A5425B /* Cart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53612274D4FE900A5425B /* Cart+CoreDataProperties.swift */; };
+		2DF53618274F8C7900A5425B /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53617274F8C7900A5425B /* SignViewController.swift */; };
+		2DF5361A274F8FE500A5425B /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53619274F8FE500A5425B /* loginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DF53611274D4FE900A5425B /* Cart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2DF53612274D4FE900A5425B /* Cart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DF53617274F8C7900A5425B /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		2DF53619274F8FE500A5425B /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 			isa = PBXGroup;
 			children = (
 				2D915A2C274ACE4800B9B62F /* CartViewController.swift */,
+				2DF53617274F8C7900A5425B /* SignViewController.swift */,
 				2D5FE476274D4CC000487C9B /* OrderViewController.swift */,
+				2DF53619274F8FE500A5425B /* loginViewController.swift */,
 				2D915A0A274AC26D00B9B62F /* ViewController.swift */,
 			);
 			path = "View Controller";
@@ -211,11 +217,13 @@
 				2D915A2B274AC7A300B9B62F /* proudectCollectionViewCell.swift in Sources */,
 				2DF53614274D4FE900A5425B /* Cart+CoreDataProperties.swift in Sources */,
 				2D5FE477274D4CC000487C9B /* OrderViewController.swift in Sources */,
+				2DF53618274F8C7900A5425B /* SignViewController.swift in Sources */,
 				2D915A11274AC26D00B9B62F /* PerfectPair.xcdatamodeld in Sources */,
 				2D915A2D274ACE4800B9B62F /* CartViewController.swift in Sources */,
 				2D915A26274AC6B100B9B62F /* Customer+CoreDataProperties.swift in Sources */,
 				2D915A2F274AD57B00B9B62F /* CartCollectionViewCell.swift in Sources */,
 				2D915A07274AC26D00B9B62F /* AppDelegate.swift in Sources */,
+				2DF5361A274F8FE500A5425B /* loginViewController.swift in Sources */,
 				2D915A23274AC6B100B9B62F /* Order+CoreDataClass.swift in Sources */,
 				2D915A09274AC26D00B9B62F /* SceneDelegate.swift in Sources */,
 				2D915A25274AC6B100B9B62F /* Customer+CoreDataClass.swift in Sources */,

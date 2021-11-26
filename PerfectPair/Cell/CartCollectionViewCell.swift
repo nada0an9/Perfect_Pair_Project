@@ -9,6 +9,16 @@ import UIKit
 
 class CartCollectionViewCell: UICollectionViewCell {
     
+    var yourobj : (() -> Void)? = nil
+
+    @IBAction func saveCell(_ sender: Any) {
+        if let btnAction = self.yourobj
+              {
+                  btnAction()
+                //  user!("pass string")
+              }
+
+    }
     @IBOutlet weak var sizeSegment: UISegmentedControl!
     @IBOutlet weak var cartNameLable: UILabel!
     @IBOutlet weak var qtyTextField: UITextField!
