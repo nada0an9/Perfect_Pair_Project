@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class CartViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
+class CartViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var validationLable: UILabel!
     // Handle for the whole DataModel to interact with
@@ -85,7 +85,55 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
 
         return cell
     }
-
+    private func setupLongGestureRecognizerOnCollection() {
+        let longPressedGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(gestureRecognizer:)))
+        longPressedGesture.minimumPressDuration = 0.5
+        longPressedGesture.delegate = self
+        longPressedGesture.delaysTouchesBegan = true
+        cartCollectionView?.addGestureRecognizer(longPressedGesture)
+    }
+    
+    @objc func handleLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
+        if (gestureRecognizer.state != .began) {
+            return
+        }
+        
+        let p = gestureRecognizer.location(in: cartCollectionView)
+        
+        if let indexPath = cartCollectionView?.indexPathForItem(at: p) {
+            print("Long press at item: \(indexPath.row)")
+            
+            let refreshAlert = UIAlertController(title: "Delete", message: "Are you sure ?", preferredStyle: UIAlertController.Style.alert)
+            
+            refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+                print(" Ok delete  logic here")
+                let cartToRemoved = self.result[indexPath.row]
+                        self.context.delete(cartToRemoved)
+                        do{
+                            try self.context.save()
+                        }
+                        catch{
+                            print("unable to delete")
+                        }
+                
+                self.fetchDataFromDB()
+                
+                        
+         
+                self.cartCollectionView.reloadData()
+            }))
+            
+            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+                print(" Cancel Logic here")
+                self.cartCollectionView.reloadData()
+                
+            }))
+            
+            present(refreshAlert, animated: true, completion: nil)
+            
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
 ////        let cartToRemoved = result[indexPath.row]
@@ -151,7 +199,8 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
         cartCollectionView.dataSource = self
         cartCollectionView.delegate = self
         fetchDataFromDB()
-        
+        setupLongGestureRecognizerOnCollection()
+
         
     }
     
