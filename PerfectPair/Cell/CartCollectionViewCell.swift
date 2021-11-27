@@ -19,6 +19,9 @@ class CartCollectionViewCell: UICollectionViewCell {
               }
 
     }
+    
+    
+    @IBOutlet weak var imageInCart: UIImageView!
     @IBOutlet weak var sizeSegment: UISegmentedControl!
     @IBOutlet weak var cartNameLable: UILabel!
     @IBOutlet weak var qtyTextField: UITextField!

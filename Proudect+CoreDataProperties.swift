@@ -2,7 +2,7 @@
 //  Proudect+CoreDataProperties.swift
 //  PerfectPair
 //
-//  Created by Nada Alansari on 16/04/1443 AH.
+//  Created by Nada Alansari on 22/04/1443 AH.
 //
 //
 
@@ -17,10 +17,8 @@ extension Proudect {
     }
 
     @NSManaged public var proudect_name: String?
-    @NSManaged public var proudect_size: String?
-    @NSManaged public var proudect_price: String?
     @NSManaged public var proudect_photo: String?
-    @NSManaged public var toOrder: Order?
+    @NSManaged public var proudect_price: String?
 
 }
 

@@ -10,6 +10,7 @@ import CoreData
 
 class CartViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var validationLable: UILabel!
     // Handle for the whole DataModel to interact with
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -27,7 +28,16 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
         cell.layer.cornerRadius = 12;
         cell.cartNameLable.text = result[indexPath.row].proudect_name
         cell.qtyTextField.text = result[indexPath.row].proudect_qty
-        
+        if(result[indexPath.row].proudect_name == "Nike Aire Max")
+        {
+            cell.imageInCart.image = UIImage(named: "nike1.png")
+        }
+        else if (result[indexPath.row].proudect_name == "Adidas Shose") {
+            cell.imageInCart.image = UIImage(named: "adidas.png")
+        }
+        else{
+            cell.imageInCart.image = UIImage(named: "puma.png")
+        }
         if(result[indexPath.row].proudect_size == "37"){
             cell.sizeSegment.selectedSegmentIndex = 0
         }
@@ -78,25 +88,19 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        let cartToRemoved = result[indexPath.row]
-
-        self.context.delete(cartToRemoved)
-        do{
-            try context.save()
-        }
-        catch{
-            print("unable to delete")
-        }
-        
-        fetchDataFromDB()
+////        let cartToRemoved = result[indexPath.row]
+//        for item in result{
+//        self.context.delete(item)
+//        do{
+//            try context.save()
+//        }
+//        catch{
+//            print("unable to delete")
+//        }
 //
-//                var s = result[indexPath.row].toProudect
-//                print("item for one order")
+//        fetchDataFromDB()
 //
-//                for item in s!{
-//                    print(item)}
-
-                
+//        }
     }
     
     
@@ -106,11 +110,10 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
         // configure the request - NSFetchRequest
         let request = Cart.fetchRequest() as! NSFetchRequest<Cart>
         
-        // fetchRequest
+         //filter request
          var filter = NSPredicate(format: "toCustomer == %@", crrunrCustomer!)
         
              request.predicate = filter
-        // assign the result of fetchRequest to array
         do {
             
             try! result = context.fetch(request)
@@ -120,29 +123,31 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
     
     
     @IBAction func confirmOrder(_ sender: Any) {
-        
-//
-//        var copiedArray = [Cart]()
-//        for item in copiedArray{
-//
-//
-//        }
-//
-//        //update
-//        for item in result {
-//
-//            let itemToUpdate = item
-////             item.proudect_qty =
-////             item.proudect_size =
-//
-//
-//        }
+        fetchDataFromDB()
+        if(result.count == 0){
+            validationLable.text = "The Cart is Empty"
+            
+        }
+        else{
+            performSegue(withIdentifier: "msg", sender: nil)
+            for item in result{
+                context.delete(item)
+                do{
+                 try context.save()
+                }
+                catch{
+                    print("unable to delete")
+                }
+                fetchDataFromDB()
+            }
+        }
+
+    
         
     }
     @IBOutlet weak var cartCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         cartCollectionView.dataSource = self
         cartCollectionView.delegate = self
         fetchDataFromDB()

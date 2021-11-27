@@ -14,34 +14,36 @@ class loginViewController: UIViewController {
 
     //handel for the hole DateModel to intercat with
       let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var result = [Customer]()
     
-    @IBAction func newUserBtn(_ sender: Any) {
-        performSegue(withIdentifier: "goToSign", sender: nil)
-    }
+    
+    var result = [Customer]()
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "show_Proudect"
+        if segue.identifier == "show_P"
         {
-            let ProudectVC = segue.destination as! ViewController
-            ProudectVC.loggedInUder = loggedInUder
-        }
+            let manualViewController = segue.destination as! ViewController
+            manualViewController.loggedInUder = loggedInUder
+    }
+        
+    
+        
     }
     @IBAction func loginBtn(_ sender: Any) {
         //make a request to the context - fetching
             let request =  Customer.fetchRequest() as NSFetchRequest<Customer>
         
         //filter
-        var userNasme = userName.text
-        var pass = passord.text
-       var filter = NSPredicate(format: "customer_name CONTAINS '\(userNasme!)' AND customer_password CONTAINS '\(pass!)'")
+          var filter = NSPredicate(format: "customer_name == %@ AND customer_password ==%@ ", userName.text!,passord.text! )
+
             request.predicate = filter
         
            do {
            try! result = context.fetch(request) // append it to result array
          }
-        if(result.count == 0){
+        if(result.count == 0 || userName.text == nil || passord.text == nil)
+        {
             print("the user not Found")
-            
+            navigationController?.popViewController(animated: true)
         }
         else{
             print("welcome")
@@ -49,11 +51,9 @@ class loginViewController: UIViewController {
             loggedInUder = result.first!
             
             print("\(loggedInUder?.customer_name)")
-
-            
             print(result.count)
             //go to proudect page
-            performSegue(withIdentifier: "show_Proudect", sender: nil)
+            performSegue(withIdentifier: "show_P", sender: nil)
             
         }
         

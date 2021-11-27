@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D5FE477274D4CC000487C9B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5FE476274D4CC000487C9B /* OrderViewController.swift */; };
-		2D5FE47A274D4D6E00487C9B /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5FE479274D4D6E00487C9B /* OrderCollectionViewCell.swift */; };
+		2D5BB3F127522DA900D442DB /* Cart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BB3EB27522DA900D442DB /* Cart+CoreDataClass.swift */; };
+		2D5BB3F227522DA900D442DB /* Cart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BB3EC27522DA900D442DB /* Cart+CoreDataProperties.swift */; };
+		2D5BB3F327522DA900D442DB /* Customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BB3ED27522DA900D442DB /* Customer+CoreDataClass.swift */; };
+		2D5BB3F427522DA900D442DB /* Customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BB3EE27522DA900D442DB /* Customer+CoreDataProperties.swift */; };
+		2D5BB3F527522DA900D442DB /* Proudect+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BB3EF27522DA900D442DB /* Proudect+CoreDataClass.swift */; };
+		2D5BB3F627522DA900D442DB /* Proudect+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BB3F027522DA900D442DB /* Proudect+CoreDataProperties.swift */; };
+		2D5BB3FA27527E7E00D442DB /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BB3F927527E7E00D442DB /* ConfirmViewController.swift */; };
 		2D915A07274AC26D00B9B62F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A06274AC26D00B9B62F /* AppDelegate.swift */; };
 		2D915A09274AC26D00B9B62F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A08274AC26D00B9B62F /* SceneDelegate.swift */; };
 		2D915A0B274AC26D00B9B62F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A0A274AC26D00B9B62F /* ViewController.swift */; };
@@ -16,24 +21,21 @@
 		2D915A11274AC26D00B9B62F /* PerfectPair.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A0F274AC26D00B9B62F /* PerfectPair.xcdatamodeld */; };
 		2D915A13274AC26D00B9B62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D915A12274AC26D00B9B62F /* Assets.xcassets */; };
 		2D915A16274AC26D00B9B62F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D915A14274AC26D00B9B62F /* LaunchScreen.storyboard */; };
-		2D915A23274AC6B100B9B62F /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A1D274AC6B000B9B62F /* Order+CoreDataClass.swift */; };
-		2D915A24274AC6B100B9B62F /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A1E274AC6B000B9B62F /* Order+CoreDataProperties.swift */; };
-		2D915A25274AC6B100B9B62F /* Customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A1F274AC6B000B9B62F /* Customer+CoreDataClass.swift */; };
-		2D915A26274AC6B100B9B62F /* Customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A20274AC6B000B9B62F /* Customer+CoreDataProperties.swift */; };
-		2D915A27274AC6B100B9B62F /* Proudect+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A21274AC6B000B9B62F /* Proudect+CoreDataClass.swift */; };
-		2D915A28274AC6B100B9B62F /* Proudect+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A22274AC6B000B9B62F /* Proudect+CoreDataProperties.swift */; };
 		2D915A2B274AC7A300B9B62F /* proudectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */; };
 		2D915A2D274ACE4800B9B62F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2C274ACE4800B9B62F /* CartViewController.swift */; };
 		2D915A2F274AD57B00B9B62F /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */; };
-		2DF53613274D4FE900A5425B /* Cart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53611274D4FE900A5425B /* Cart+CoreDataClass.swift */; };
-		2DF53614274D4FE900A5425B /* Cart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53612274D4FE900A5425B /* Cart+CoreDataProperties.swift */; };
 		2DF53618274F8C7900A5425B /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53617274F8C7900A5425B /* SignViewController.swift */; };
 		2DF5361A274F8FE500A5425B /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF53619274F8FE500A5425B /* loginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D5FE476274D4CC000487C9B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
-		2D5FE479274D4D6E00487C9B /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D5BB3EB27522DA900D442DB /* Cart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2D5BB3EC27522DA900D442DB /* Cart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D5BB3ED27522DA900D442DB /* Customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2D5BB3EE27522DA900D442DB /* Customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D5BB3EF27522DA900D442DB /* Proudect+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Proudect+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2D5BB3F027522DA900D442DB /* Proudect+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Proudect+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D5BB3F927527E7E00D442DB /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		2D915A03274AC26D00B9B62F /* PerfectPair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectPair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D915A06274AC26D00B9B62F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D915A08274AC26D00B9B62F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,17 +45,9 @@
 		2D915A12274AC26D00B9B62F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D915A15274AC26D00B9B62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D915A17274AC26D00B9B62F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D915A1D274AC6B000B9B62F /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2D915A1E274AC6B000B9B62F /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2D915A1F274AC6B000B9B62F /* Customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2D915A20274AC6B000B9B62F /* Customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2D915A21274AC6B000B9B62F /* Proudect+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Proudect+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2D915A22274AC6B000B9B62F /* Proudect+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Proudect+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proudectCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D915A2C274ACE4800B9B62F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
-		2DF53611274D4FE900A5425B /* Cart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2DF53612274D4FE900A5425B /* Cart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2DF53617274F8C7900A5425B /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		2DF53619274F8FE500A5425B /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,9 +66,9 @@
 		2D5FE478274D4CD300487C9B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2D5BB3F927527E7E00D442DB /* ConfirmViewController.swift */,
 				2D915A2C274ACE4800B9B62F /* CartViewController.swift */,
 				2DF53617274F8C7900A5425B /* SignViewController.swift */,
-				2D5FE476274D4CC000487C9B /* OrderViewController.swift */,
 				2DF53619274F8FE500A5425B /* loginViewController.swift */,
 				2D915A0A274AC26D00B9B62F /* ViewController.swift */,
 			);
@@ -86,7 +80,6 @@
 			children = (
 				2D915A2E274AD57B00B9B62F /* CartCollectionViewCell.swift */,
 				2D915A2A274AC7A300B9B62F /* proudectCollectionViewCell.swift */,
-				2D5FE479274D4D6E00487C9B /* OrderCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -94,6 +87,12 @@
 		2D9159FA274AC26D00B9B62F = {
 			isa = PBXGroup;
 			children = (
+				2D5BB3EB27522DA900D442DB /* Cart+CoreDataClass.swift */,
+				2D5BB3EC27522DA900D442DB /* Cart+CoreDataProperties.swift */,
+				2D5BB3ED27522DA900D442DB /* Customer+CoreDataClass.swift */,
+				2D5BB3EE27522DA900D442DB /* Customer+CoreDataProperties.swift */,
+				2D5BB3EF27522DA900D442DB /* Proudect+CoreDataClass.swift */,
+				2D5BB3F027522DA900D442DB /* Proudect+CoreDataProperties.swift */,
 				2D915A05274AC26D00B9B62F /* PerfectPair */,
 				2D915A04274AC26D00B9B62F /* Products */,
 			);
@@ -127,14 +126,6 @@
 		2D915A29274AC6C900B9B62F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2DF53611274D4FE900A5425B /* Cart+CoreDataClass.swift */,
-				2DF53612274D4FE900A5425B /* Cart+CoreDataProperties.swift */,
-				2D915A1D274AC6B000B9B62F /* Order+CoreDataClass.swift */,
-				2D915A1E274AC6B000B9B62F /* Order+CoreDataProperties.swift */,
-				2D915A1F274AC6B000B9B62F /* Customer+CoreDataClass.swift */,
-				2D915A20274AC6B000B9B62F /* Customer+CoreDataProperties.swift */,
-				2D915A21274AC6B000B9B62F /* Proudect+CoreDataClass.swift */,
-				2D915A22274AC6B000B9B62F /* Proudect+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,25 +201,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D915A24274AC6B100B9B62F /* Order+CoreDataProperties.swift in Sources */,
-				2DF53613274D4FE900A5425B /* Cart+CoreDataClass.swift in Sources */,
-				2D5FE47A274D4D6E00487C9B /* OrderCollectionViewCell.swift in Sources */,
+				2D5BB3F627522DA900D442DB /* Proudect+CoreDataProperties.swift in Sources */,
+				2D5BB3F527522DA900D442DB /* Proudect+CoreDataClass.swift in Sources */,
 				2D915A0B274AC26D00B9B62F /* ViewController.swift in Sources */,
+				2D5BB3FA27527E7E00D442DB /* ConfirmViewController.swift in Sources */,
 				2D915A2B274AC7A300B9B62F /* proudectCollectionViewCell.swift in Sources */,
-				2DF53614274D4FE900A5425B /* Cart+CoreDataProperties.swift in Sources */,
-				2D5FE477274D4CC000487C9B /* OrderViewController.swift in Sources */,
+				2D5BB3F227522DA900D442DB /* Cart+CoreDataProperties.swift in Sources */,
 				2DF53618274F8C7900A5425B /* SignViewController.swift in Sources */,
+				2D5BB3F127522DA900D442DB /* Cart+CoreDataClass.swift in Sources */,
 				2D915A11274AC26D00B9B62F /* PerfectPair.xcdatamodeld in Sources */,
 				2D915A2D274ACE4800B9B62F /* CartViewController.swift in Sources */,
-				2D915A26274AC6B100B9B62F /* Customer+CoreDataProperties.swift in Sources */,
 				2D915A2F274AD57B00B9B62F /* CartCollectionViewCell.swift in Sources */,
 				2D915A07274AC26D00B9B62F /* AppDelegate.swift in Sources */,
+				2D5BB3F427522DA900D442DB /* Customer+CoreDataProperties.swift in Sources */,
 				2DF5361A274F8FE500A5425B /* loginViewController.swift in Sources */,
-				2D915A23274AC6B100B9B62F /* Order+CoreDataClass.swift in Sources */,
 				2D915A09274AC26D00B9B62F /* SceneDelegate.swift in Sources */,
-				2D915A25274AC6B100B9B62F /* Customer+CoreDataClass.swift in Sources */,
-				2D915A27274AC6B100B9B62F /* Proudect+CoreDataClass.swift in Sources */,
-				2D915A28274AC6B100B9B62F /* Proudect+CoreDataProperties.swift in Sources */,
+				2D5BB3F327522DA900D442DB /* Customer+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
