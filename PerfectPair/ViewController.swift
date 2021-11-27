@@ -4,7 +4,8 @@
 //
 //  Created by Nada Alansari on 16/04/1443 AH.
 //
-
+import AVKit
+import AVFoundation
 import UIKit
 import CoreData
 
@@ -27,7 +28,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
             try! context.save()
         }
     }
-
+    var isPlayed : Bool = false
     var proudectArr = [Proudect]()
     
     //MARK: collectionView Stuff
@@ -129,6 +130,27 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         }
     }
 
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if (!isPlayed) {
+            
+            // name video and type
+            let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "الفيديو", ofType:"mov" )!))
+            let vc = AVPlayerViewController()
+            vc.player = player
+            present(vc, animated: true) {
+                //لازم استدعيها عشان يشتغل
+                player.play()
+            }
+            isPlayed = true
+        }
+    }
+    
+    
+    
 
 }
 
