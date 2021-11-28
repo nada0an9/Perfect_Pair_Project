@@ -35,6 +35,15 @@ class CartViewController: UIViewController ,UICollectionViewDataSource, UICollec
         else if (result[indexPath.row].proudect_name == "Adidas Shose") {
             cell.imageInCart.image = UIImage(named: "adidas.png")
         }
+        else if (result[indexPath.row].proudect_name == "Nike Wearallday") {
+            cell.imageInCart.image = UIImage(named: "PngItem_6279040.png")
+        }
+        else if (result[indexPath.row].proudect_name == "Adidas NMD R1") {
+            cell.imageInCart.image = UIImage(named: "PngItem_289208.png")
+        }
+        else if (result[indexPath.row].proudect_name == "Nike Revolution 5") {
+            cell.imageInCart.image = UIImage(named: "PngItem_2441834.png")
+        }
         else{
             cell.imageInCart.image = UIImage(named: "puma.png")
         }

@@ -38,7 +38,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_id", for: indexPath as IndexPath) as! proudectCollectionViewCell
         
-//        cell.layer.cornerRadius = 12;
+        cell.layer.cornerRadius = 12;
         cell.shoseImage.image = UIImage(named:result[indexPath.row].proudect_photo!)
         cell.proudect_name_Lable.text = result[indexPath.row].proudect_name
         cell.priceLable.text =  result[indexPath.row].proudect_price
@@ -108,6 +108,31 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         fetchDataFromDB()
         
     }
+    func addProudect2(){
+    
+        
+    let newProudect = Proudect(context: context)
+    newProudect.proudect_name = "Nike Revolution 5"
+    newProudect.proudect_photo = "PngItem_2441834.png"
+        newProudect.proudect_price = "600"
+
+    let newProudect2 = Proudect(context: context)
+    newProudect2.proudect_name = "Adidas NMD R1"
+    newProudect2.proudect_photo = "PngItem_289208.png"
+    newProudect2.proudect_price = "290"
+    
+    let newProudect3 = Proudect(context: context)
+    newProudect3.proudect_name = "Nike Wearallday"
+    newProudect3.proudect_photo = "PngItem_6279040.png"
+    newProudect3.proudect_price = "440"
+    
+    // Save Context
+    do { try! context.save() }
+    
+    // Fetch data from DB again
+    fetchDataFromDB()
+    
+}
     func deleteAll(){
         
         for item in result{
@@ -153,6 +178,12 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
          fetchDataFromDB()
 
         }
+        if(result.count == 3){
+            addProudect2()
+         fetchDataFromDB()
+
+        }
+        
 
 
         print("result  \(result.count)")

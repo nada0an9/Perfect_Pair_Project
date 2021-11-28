@@ -9,10 +9,12 @@ import UIKit
 
 class ConfirmViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//
+//        confirmedImage.image = UIImage(named: "image_processing20191111-32591-y05g0r-2-2.png")
+//        
     }
     
 

@@ -28,6 +28,7 @@ class loginViewController: UIViewController {
     
         
     }
+    
     @IBAction func loginBtn(_ sender: Any) {
         //make a request to the context - fetching
             let request =  Customer.fetchRequest() as NSFetchRequest<Customer>
@@ -40,10 +41,11 @@ class loginViewController: UIViewController {
            do {
            try! result = context.fetch(request) // append it to result array
          }
-        if(result.count == 0 || userName.text == nil || passord.text == nil)
+        
+        if(result.count == 0)
         {
             print("the user not Found")
-            navigationController?.popViewController(animated: true)
+ 
         }
         else{
             print("welcome")
